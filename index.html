@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        #fact {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #555;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fun Facts Generator</h1>
+    <div id="fact">Click the button to generate a fun fact!</div>
+    <button id="generate">Generate Another Fun Fact</button>
+
+    <script>
+        const facts = [
+            "Cats are crepuscular, which means they are most active during dawn and dusk.",
+            "A cat's nose print is unique, just like a human fingerprint.",
+            "Cats can jump up to six times their height.",
+            "The average cat sleeps for about 12-16 hours a day.",
+            "Cats have a third eyelid, called a nictitating membrane, that helps protect their eyes.",
+            "A group of cats is called a clowder.",
+            "Cats can make over 100 different vocalizations, while dogs can only make about 10.",
+            "The oldest known cat lived to be 38 years old.",
+            "Cats use their whiskers to help them navigate and sense their environment.",
+            "Cats have a specialized 'purr box' in their throat that can vibrate at a variety of frequencies, and it's believed this can promote healing."
+        ];
+
+        document.getElementById('generate').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
